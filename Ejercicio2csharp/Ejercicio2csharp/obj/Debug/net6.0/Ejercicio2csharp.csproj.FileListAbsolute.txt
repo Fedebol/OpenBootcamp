@@ -1,0 +1,15 @@
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\Ejercicio2csharp\Ejercicio2csharp\bin\Debug\net6.0\Ejercicio2csharp.exe
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\Ejercicio2csharp\Ejercicio2csharp\bin\Debug\net6.0\Ejercicio2csharp.deps.json
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\Ejercicio2csharp\Ejercicio2csharp\bin\Debug\net6.0\Ejercicio2csharp.runtimeconfig.json
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\Ejercicio2csharp\Ejercicio2csharp\bin\Debug\net6.0\Ejercicio2csharp.dll
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\Ejercicio2csharp\Ejercicio2csharp\bin\Debug\net6.0\Ejercicio2csharp.pdb
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\Ejercicio2csharp\Ejercicio2csharp\obj\Debug\net6.0\Ejercicio2csharp.csproj.AssemblyReference.cache
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\Ejercicio2csharp\Ejercicio2csharp\obj\Debug\net6.0\Ejercicio2csharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\Ejercicio2csharp\Ejercicio2csharp\obj\Debug\net6.0\Ejercicio2csharp.AssemblyInfoInputs.cache
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\Ejercicio2csharp\Ejercicio2csharp\obj\Debug\net6.0\Ejercicio2csharp.AssemblyInfo.cs
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\Ejercicio2csharp\Ejercicio2csharp\obj\Debug\net6.0\Ejercicio2csharp.csproj.CoreCompileInputs.cache
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\Ejercicio2csharp\Ejercicio2csharp\obj\Debug\net6.0\Ejercicio2csharp.dll
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\Ejercicio2csharp\Ejercicio2csharp\obj\Debug\net6.0\refint\Ejercicio2csharp.dll
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\Ejercicio2csharp\Ejercicio2csharp\obj\Debug\net6.0\Ejercicio2csharp.pdb
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\Ejercicio2csharp\Ejercicio2csharp\obj\Debug\net6.0\Ejercicio2csharp.genruntimeconfig.cache
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\Ejercicio2csharp\Ejercicio2csharp\obj\Debug\net6.0\ref\Ejercicio2csharp.dll

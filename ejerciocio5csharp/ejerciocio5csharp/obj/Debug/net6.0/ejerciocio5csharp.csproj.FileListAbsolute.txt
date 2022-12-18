@@ -1,0 +1,15 @@
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\ejerciocio5csharp\ejerciocio5csharp\bin\Debug\net6.0\ejerciocio5csharp.exe
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\ejerciocio5csharp\ejerciocio5csharp\bin\Debug\net6.0\ejerciocio5csharp.deps.json
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\ejerciocio5csharp\ejerciocio5csharp\bin\Debug\net6.0\ejerciocio5csharp.runtimeconfig.json
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\ejerciocio5csharp\ejerciocio5csharp\bin\Debug\net6.0\ejerciocio5csharp.dll
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\ejerciocio5csharp\ejerciocio5csharp\bin\Debug\net6.0\ejerciocio5csharp.pdb
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\ejerciocio5csharp\ejerciocio5csharp\obj\Debug\net6.0\ejerciocio5csharp.csproj.AssemblyReference.cache
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\ejerciocio5csharp\ejerciocio5csharp\obj\Debug\net6.0\ejerciocio5csharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\ejerciocio5csharp\ejerciocio5csharp\obj\Debug\net6.0\ejerciocio5csharp.AssemblyInfoInputs.cache
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\ejerciocio5csharp\ejerciocio5csharp\obj\Debug\net6.0\ejerciocio5csharp.AssemblyInfo.cs
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\ejerciocio5csharp\ejerciocio5csharp\obj\Debug\net6.0\ejerciocio5csharp.csproj.CoreCompileInputs.cache
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\ejerciocio5csharp\ejerciocio5csharp\obj\Debug\net6.0\ejerciocio5csharp.dll
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\ejerciocio5csharp\ejerciocio5csharp\obj\Debug\net6.0\refint\ejerciocio5csharp.dll
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\ejerciocio5csharp\ejerciocio5csharp\obj\Debug\net6.0\ejerciocio5csharp.pdb
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\ejerciocio5csharp\ejerciocio5csharp\obj\Debug\net6.0\ejerciocio5csharp.genruntimeconfig.cache
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\ejerciocio5csharp\ejerciocio5csharp\obj\Debug\net6.0\ref\ejerciocio5csharp.dll

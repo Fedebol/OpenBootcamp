@@ -38,45 +38,50 @@ Console.WriteLine("ingrese un numero para el alto: ");
 var alto = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("desea que la figura este rellena? s/n: ");
 var relleno = Console.ReadLine();
+Console.WriteLine("ingrese el numero de veces que desea repetir el proceso: ");
+var veces = Convert.ToInt32(Console.ReadLine());
 
-for(var i = 0; i < alto; i++)
+for (var v = 0; v < veces; v++)
 {
-    Console.WriteLine();
-    for (var k = 0; k < ancho; k++)
+    for (var i = 0; i < alto; i++)
     {
-        if (i == 0)
+        Console.WriteLine();
+        for (var k = 0; k < ancho; k++)
         {
-            Console.Write("*");
-        }
-        else if (i == alto-1)
-        {
-            Console.Write('*');
-        }
-        else
-        {
-            if (k == 0)
+            if (i == 0)
             {
                 Console.Write("*");
             }
-            else if (k == ancho - 1)
+            else if (i == alto-1)
             {
                 Console.Write('*');
             }
             else
             {
-
-                if (relleno == "s")
+                if (k == 0)
                 {
                     Console.Write("*");
                 }
+                else if (k == ancho - 1)
+                {
+                    Console.Write('*');
+                }
                 else
                 {
-                    Console.Write(" ");
+
+                    if (relleno == "s")
+                    {
+                        Console.Write("*");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
                 }
             }
-        }
         
 
+        }
     }
 }
 

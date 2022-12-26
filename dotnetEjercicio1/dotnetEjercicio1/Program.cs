@@ -1,4 +1,19 @@
+//1. Using to work whit ENtityFramework
+
+using Microsoft.EntityFrameworkCore;
+using dotnetEjercicio1.DataAccess;
+using Microsoft.Extensions.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+// 2. Connection whit SQL Server Express
+
+const string CONNECTIONNAME = "UniversityDB";
+var connectionString = builder.Configuration.GetConnectionString(CONNECTIONNAME);
+
+// 3. Add Context
+builder.Services.AddDbContext<UniversityDBContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 

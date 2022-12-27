@@ -1,8 +1,8 @@
-//1. Using to work whit ENtityFramework
+//1. Using to work whit EntityFramework
 
 using Microsoft.EntityFrameworkCore;
 using dotnetEjercicio1.DataAccess;
-using Microsoft.Extensions.DependencyInjection;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 const string CONNECTIONNAME = "UniversityDB";
 var connectionString = builder.Configuration.GetConnectionString(CONNECTIONNAME);
 
-// 3. Add Context
+// 3. Add Context to Services of builder
 builder.Services.AddDbContext<UniversityDBContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.

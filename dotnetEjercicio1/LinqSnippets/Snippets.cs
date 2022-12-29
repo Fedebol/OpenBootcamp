@@ -183,7 +183,7 @@ namespace LinqSnippets
 
             bool hasEmployemore =
                 enterprise.Any(enterprise =>
-                enterprise.Employes.Any(employe =>
+                enterprise.Employes.Any(employe => 
                 employe.Salary > 1000));
 
 

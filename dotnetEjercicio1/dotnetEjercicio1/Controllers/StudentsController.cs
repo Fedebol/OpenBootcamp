@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using dotnetEjercicio1.DataAccess;
 using dotnetEjercicio1.Models.DataModels;
+using dotnetEjercicio1.Service;
 
 namespace dotnetEjercicio1.Controllers
 {
@@ -15,10 +16,13 @@ namespace dotnetEjercicio1.Controllers
     public class StudentsController : ControllerBase
     {
         private readonly UniversityDBContext _context;
+        // Service
+        private readonly IStudentsService _studentsService;
 
-        public StudentsController(UniversityDBContext context)
+        public StudentsController(UniversityDBContext context, IStudentsService studentsService)
         {
             _context = context;
+            _studentsService = studentsService;
         }
 
         // GET: api/Students

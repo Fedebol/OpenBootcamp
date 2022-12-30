@@ -7,6 +7,9 @@ namespace dotnetEjercicio1.Service
 
         IEnumerable<Student> GetStudentsWithCourse();
         IEnumerable<Student> GetStudentsWithNotCourse();
+        IEnumerable<Student> GetAllStudents();
+        IEnumerable<Student> GetAllStudentsAdult();
+      
 
 
     }

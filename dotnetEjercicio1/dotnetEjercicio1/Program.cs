@@ -3,6 +3,8 @@
 using Microsoft.EntityFrameworkCore;
 using dotnetEjercicio1.DataAccess;
 using dotnetEjercicio1.Service;
+using dotnetEjercicio1;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,9 @@ var connectionString = builder.Configuration.GetConnectionString(CONNECTIONNAME)
 // 3. Add Context to Services of builder
 builder.Services.AddDbContext<UniversityDBContext>(options => options.UseSqlServer(connectionString));
 
+// 7. Add Service of JWT Autorization
+builder.Services.AddJwTokenServices(builder.Configuration);
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -25,9 +30,27 @@ builder.Services.AddScoped<IStudentsService,StudentsService>();
 // TODO: add the rest of services
 
 
+// 8. Add Authorization
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("UserOnlyPolicy", policy => policy.RequireClaim("UserOnly", "User 1"));
+});
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+// 9. config swagger to take care of autorization of JWT
+builder.Services.AddSwaggerGen( options =>
+    {
+        options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+        {
+
+        });
+
+
+    }
+);
 
 // 5. CORS Configuration
 builder.Services.AddCors(options =>

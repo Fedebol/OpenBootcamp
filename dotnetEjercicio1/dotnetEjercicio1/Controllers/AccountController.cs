@@ -1,4 +1,5 @@
-﻿using dotnetEjercicio1.Helpers;
+﻿using dotnetEjercicio1.DataAccess;
+using dotnetEjercicio1.Helpers;
 using dotnetEjercicio1.Models.DataModels;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
@@ -11,9 +12,11 @@ namespace dotnetEjercicio1.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
+        private readonly UniversityDBContext _context;
         private readonly JwtSettings _jwtSetting;
-        public AccountController(JwtSettings jwtSetting)
+        public AccountController(UniversityDBContext context, JwtSettings jwtSetting)
         {
+            _context = context;
             _jwtSetting = jwtSetting;
         }
 

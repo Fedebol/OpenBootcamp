@@ -1,4 +1,5 @@
-﻿using dotnetEjercicio1.Models.DataModels;
+﻿using dotnetEjercicio1.DataAccess;
+using dotnetEjercicio1.Models.DataModels;
 
 namespace dotnetEjercicio1.Service
 {
@@ -6,6 +7,7 @@ namespace dotnetEjercicio1.Service
     {
         public IEnumerable<User> GetUserForMail()
         {
+            
             throw new NotImplementedException();
         }
     }

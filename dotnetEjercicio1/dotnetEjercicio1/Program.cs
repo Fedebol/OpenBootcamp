@@ -27,6 +27,9 @@ builder.Services.AddControllers();
 // 4. Add Custom Services (folder Services)
 
 builder.Services.AddScoped<IStudentsService,StudentsService>();
+builder.Services.AddScoped<ICoursesService, CoursesService>();
+builder.Services.AddScoped<IUsuersSerice, UsersService>();
+
 // TODO: add the rest of services
 
 

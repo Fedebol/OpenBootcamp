@@ -1,4 +1,5 @@
 ﻿using dotnetEjercicio1.Models.DataModels;
+using System.Collections;
 
 namespace dotnetEjercicio1.Service
 {
@@ -6,7 +7,7 @@ namespace dotnetEjercicio1.Service
     {
 
         IEnumerable<Course> GetCourseLevel(Nivel level);
-        IEnumerable<Course> GetCoursesCategory();
+        IEnumerable<Course> GetCoursesCategory(ICollection category, Nivel level);
         IEnumerable<Course> GetCoursesNotStudent();
     }
 }

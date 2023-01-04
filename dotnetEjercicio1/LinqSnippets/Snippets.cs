@@ -240,7 +240,7 @@ namespace LinqSnippets
 
             var takeTwoFirts = myList.Take(2); // { 1, 2 }
             var takeLastTwo = myList.TakeLast(2); //{ 11, 12 }
-            var takeWhile = myList.SkipWhile(num => num < 4); // { 1, 2, 3 }
+            var takeWhile = myList.TakeWhile(num => num < 4); // { 1, 2, 3 }
 
         }
 

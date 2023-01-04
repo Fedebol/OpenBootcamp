@@ -5,7 +5,7 @@ namespace dotnetEjercicio1.Service
     public interface ICoursesService
     {
 
-        IEnumerable<Course> GetCourseLevel();
+        IEnumerable<Course> GetCourseLevel(Nivel level);
         IEnumerable<Course> GetCoursesCategory();
         IEnumerable<Course> GetCoursesNotStudent();
     }

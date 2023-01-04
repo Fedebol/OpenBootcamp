@@ -5,10 +5,23 @@ namespace dotnetEjercicio1.Service
 {
     public class UsersService : IUsuersSerice
     {
-        public IEnumerable<User> GetUserForMail()
+
+        private readonly UniversityDBContext _context;
+      
+        public UsersService(UniversityDBContext context)
         {
+            _context = context;
             
-            throw new NotImplementedException();
         }
+
+      
+        public IEnumerable<User> GetUserForMail(string mail)
+        {
+            var users = from user in _context.Users
+                        where user.Email == mail
+                        select user;
+            return users;
+        }
+
     }
 }

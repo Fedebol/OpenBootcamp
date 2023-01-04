@@ -4,6 +4,6 @@ namespace dotnetEjercicio1.Service
 {
     public interface IUsuersSerice
     {
-        IEnumerable<User> GetUserForMail();
+        IEnumerable<User> GetUserForMail(string mail);
     }
 }

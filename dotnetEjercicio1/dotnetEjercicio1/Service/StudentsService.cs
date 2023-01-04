@@ -1,42 +1,52 @@
-﻿using dotnetEjercicio1.Models.DataModels;
+﻿using dotnetEjercicio1.DataAccess;
+using dotnetEjercicio1.Models.DataModels;
+
 
 namespace dotnetEjercicio1.Service
 {
     public class StudentsService : IStudentsService
     {
+        private readonly UniversityDBContext _context;
+        public StudentsService(UniversityDBContext context)
+        {
+            _context = context;
+
+        }
+
         public IEnumerable<Student> GetAllStudents()
         {
-            
-            throw new NotImplementedException();
+
+            var students = _context.Students.SelectMany(student => student.FirstName);
+            return (IEnumerable<Student>)students;
         }
 
         public IEnumerable<Student> GetAllStudentsAdult()
         {
-            //var adultStudent = Student.GroupBy(student => student);
+            var studentAdult = from student in _context.Students
+                               where student.DOB.AddYears(18) >= DateTime.Now
+                              select student.FirstName;
+            return (IEnumerable<Student>)studentAdult;
 
-            //foreach (var mayor in adultStudent)
-            //{
-            //    Console.WriteLine("-----------{0}----------", mayor.Key);
-            //    foreach (var student in mayor)
-            //    {
-            //        return(student.Name);
-            //    }
-            throw new NotImplementedException();
         }
 
 
 
-
-        // TODO: resolver
-
+        
+       
         public IEnumerable<Student> GetStudentsWithCourse()
         {
-            throw new NotImplementedException();
+            var whitCourse = from student in _context.Students
+                             where student.Cursos != null
+                             select student;
+            return whitCourse;
         }
 
         public IEnumerable<Student> GetStudentsWithNotCourse()
         {
-            throw new NotImplementedException();
+            var whitNotCourse = from student in _context.Students
+                             where student.Cursos == null
+                             select student;
+            return whitNotCourse;
         }
     }
 }

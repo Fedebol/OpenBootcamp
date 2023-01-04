@@ -1,22 +1,44 @@
-﻿using dotnetEjercicio1.Models.DataModels;
+﻿using dotnetEjercicio1.DataAccess;
+using dotnetEjercicio1.Models.DataModels;
+using System.Collections;
 
 namespace dotnetEjercicio1.Service
 {
+
+
     public class CoursesService : ICoursesService
     {
-        public IEnumerable<Course> GetCourseLevel()
+
+        private readonly UniversityDBContext _context;
+        public CoursesService(UniversityDBContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+
         }
 
-        public IEnumerable<Course> GetCoursesCategory()
+        public IEnumerable<Course> GetCourseLevel(Nivel level)
         {
-            throw new NotImplementedException();
+            var coursesForLevel = from nivel in _context.Cursos
+                                  where nivel.Nivel == level && nivel.Students.Count() > 0
+                                  select nivel;
+            return coursesForLevel;
+
+        }
+
+        public IEnumerable<Course> GetCoursesCategory(ICollection category, Nivel level)
+        {
+            var coursesCategory = from categorys in _context.Cursos
+                                  where categorys.Nivel == level && categorys.Categorias == category
+                                  select categorys;
+            return coursesCategory;
         }
 
         public IEnumerable<Course> GetCoursesNotStudent()
         {
-            throw new NotImplementedException();
+            var coursesNotStudent = from curso in _context.Cursos
+                                  where curso.Students.Count() == 0
+                                  select curso;
+            return coursesNotStudent;
         }
     }
 }

@@ -9,5 +9,6 @@ namespace dotnetEjercicio1.Service
         IEnumerable<Course> GetCourseLevel(Nivel level);
         IEnumerable<Course> GetCoursesCategory(ICollection category, Nivel level);
         IEnumerable<Course> GetCoursesNotStudent();
+        IEnumerable<Course> GetCourseNotObjet();
     }
 }

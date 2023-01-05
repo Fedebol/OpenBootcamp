@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using dotnetEjercicio1.DataAccess;
 using dotnetEjercicio1.Models.DataModels;
+using dotnetEjercicio1.Service;
 
 namespace dotnetEjercicio1.Controllers
 {
@@ -15,10 +16,13 @@ namespace dotnetEjercicio1.Controllers
     public class CategoriesController : ControllerBase
     {
         private readonly UniversityDBContext _context;
+        private readonly ICategoriesServices _categoriesServices;
 
-        public CategoriesController(UniversityDBContext context)
+        public CategoriesController(UniversityDBContext context, ICategoriesServices categoriesServices)
         {
             _context = context;
+            _categoriesServices = categoriesServices;
+
         }
 
         // GET: api/Categories

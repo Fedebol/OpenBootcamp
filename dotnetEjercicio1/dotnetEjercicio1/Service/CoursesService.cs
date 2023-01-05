@@ -40,5 +40,13 @@ namespace dotnetEjercicio1.Service
                                   select curso;
             return coursesNotStudent;
         }
+
+        public IEnumerable<Course> GetCourseNotObjet()
+        {
+            var courseNotObjet = from curso in _context.Cursos
+                                 where curso != null
+                                 select curso;
+            return courseNotObjet;
+        }
     }
 }

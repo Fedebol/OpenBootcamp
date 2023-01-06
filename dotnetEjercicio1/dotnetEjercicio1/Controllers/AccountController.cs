@@ -44,17 +44,22 @@ namespace dotnetEjercicio1.Controllers
             try
             {
                 var Token = new UserTokens();
-                var Valid = Logins.Any(user => user.UserName.Equals(userLogin.UserName, StringComparison.OrdinalIgnoreCase));
 
-                if (Valid)
+                var searchUser = (from user in _context.Users
+                                  where user.UserName == userLogin.UserName && user.Password == userLogin.Password
+                                  select user).FirstOrDefault();
+
+                //var Valid = Logins.Any(user => user.UserName.Equals(userLogin.UserName, StringComparison.OrdinalIgnoreCase));
+
+                if (searchUser != null)
                 {
-                    var user = Logins.FirstOrDefault(user => user.UserName.Equals(userLogin.UserName, StringComparison.OrdinalIgnoreCase));
+                    //var user = Logins.FirstOrDefault(user => user.UserName.Equals(userLogin.UserName, StringComparison.OrdinalIgnoreCase));
 
                     Token = JwtHelpers.GenTokenKey(new UserTokens()
                     {
-                        UserName = user.UserName,
-                        EmailId = user.Email,
-                        Id = user.Id,
+                        UserName = searchUser.UserName,
+                        EmailId = searchUser.Email,
+                        Id = searchUser.Id,
                         GuidId = Guid.NewGuid(),
 
                     }, _jwtSetting);

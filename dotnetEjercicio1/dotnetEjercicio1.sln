@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetEjercicio1", "dotnetEjercicio1\dotnetEjercicio1.csproj", "{8C6D402C-1184-4A69-B981-D56740FB056F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqSnippets", "LinqSnippets\LinqSnippets.csproj", "{9356A626-1019-4FA9-8556-DCBBD56FDF4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqSnippets", "LinqSnippets\LinqSnippets.csproj", "{9356A626-1019-4FA9-8556-DCBBD56FDF4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternationalApi", "InternationalApi\InternationalApi.csproj", "{543A6AC0-609F-4C74-A76A-C98F500D3B17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9356A626-1019-4FA9-8556-DCBBD56FDF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9356A626-1019-4FA9-8556-DCBBD56FDF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9356A626-1019-4FA9-8556-DCBBD56FDF4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{543A6AC0-609F-4C74-A76A-C98F500D3B17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{543A6AC0-609F-4C74-A76A-C98F500D3B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{543A6AC0-609F-4C74-A76A-C98F500D3B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{543A6AC0-609F-4C74-A76A-C98F500D3B17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

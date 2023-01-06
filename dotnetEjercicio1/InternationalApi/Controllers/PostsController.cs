@@ -33,12 +33,12 @@ namespace InternationalApi.Controllers
         }
 
         [HttpGet]
-        [Route("SharedRecource")]
+        [Route("SharedResource")]
         public IActionResult GetUsingSharedResource()
         {
             var article = _stringLocalizer["Article"];
             var postName = _stringLocalizer.GetString("Welcome").Value ?? String.Empty;
-            var todayIs = string.Format(_sharedResourceLocalizer.GetString("TodayIs"), DateTime.Now.ToLongDateString());
+            var todayIs = string.Format(_sharedResourceLocalizer.GetString("TodayIs").Value, DateTime.Now.ToLongDateString());
 
 
 

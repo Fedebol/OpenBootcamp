@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ApiVersionControl.DTO;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace ApiVersionControl.Controllers.V1
 {
@@ -15,6 +17,20 @@ namespace ApiVersionControl.Controllers.V1
         public UsersController(HttpClient httpClient)
         {
             _httpClient = httpClient;
+        }
+
+        [MapToApiVersion("1.0")]
+        [HttpGet(Name = "GetUsersData")]
+        public async Task<IActionResult> GetUsersDataAsync()
+        {
+            _httpClient.DefaultRequestHeaders.Clear();
+            _httpClient.DefaultRequestHeaders.Add("app-id", AppID);
+
+            var response = await _httpClient.GetStreamAsync(ApiTestURL);
+
+            var usersData = await JsonSerializer.DeserializeAsync<UsersResponseData>(response);
+
+            return Ok(usersData);
         }
     }
 }

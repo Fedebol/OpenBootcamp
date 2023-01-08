@@ -17,11 +17,13 @@ namespace dotnetEjercicio1.Controllers
     {
         private readonly UniversityDBContext _context;
         private readonly ICategoriesServices _categoriesServices;
+        private readonly ILoggerFactory _loggerFactory;
 
-        public CategoriesController(UniversityDBContext context, ICategoriesServices categoriesServices)
+        public CategoriesController(UniversityDBContext context, ICategoriesServices categoriesServices, ILoggerFactory loggerFactory)
         {
             _context = context;
             _categoriesServices = categoriesServices;
+            _loggerFactory = loggerFactory;
 
         }
 

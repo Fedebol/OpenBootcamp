@@ -18,11 +18,13 @@ namespace dotnetEjercicio1.Controllers
         private readonly UniversityDBContext _context;
         // Service
         private readonly IStudentsService _studentsService;
+        private readonly ILoggerFactory _loggerFactory;
 
-        public StudentsController(UniversityDBContext context, IStudentsService studentsService)
+        public StudentsController(UniversityDBContext context, IStudentsService studentsService, ILoggerFactory loggerFactory)
         {
             _context = context;
             _studentsService = studentsService;
+            _loggerFactory = loggerFactory;
         }
 
         // GET: api/Students

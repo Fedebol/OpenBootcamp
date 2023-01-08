@@ -1,0 +1,15 @@
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\FlujoAsincrono\FlujoAsincrono\bin\Debug\net6.0\FlujoAsincrono.exe
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\FlujoAsincrono\FlujoAsincrono\bin\Debug\net6.0\FlujoAsincrono.deps.json
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\FlujoAsincrono\FlujoAsincrono\bin\Debug\net6.0\FlujoAsincrono.runtimeconfig.json
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\FlujoAsincrono\FlujoAsincrono\bin\Debug\net6.0\FlujoAsincrono.dll
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\FlujoAsincrono\FlujoAsincrono\bin\Debug\net6.0\FlujoAsincrono.pdb
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\FlujoAsincrono\FlujoAsincrono\obj\Debug\net6.0\FlujoAsincrono.csproj.AssemblyReference.cache
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\FlujoAsincrono\FlujoAsincrono\obj\Debug\net6.0\FlujoAsincrono.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\FlujoAsincrono\FlujoAsincrono\obj\Debug\net6.0\FlujoAsincrono.AssemblyInfoInputs.cache
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\FlujoAsincrono\FlujoAsincrono\obj\Debug\net6.0\FlujoAsincrono.AssemblyInfo.cs
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\FlujoAsincrono\FlujoAsincrono\obj\Debug\net6.0\FlujoAsincrono.csproj.CoreCompileInputs.cache
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\FlujoAsincrono\FlujoAsincrono\obj\Debug\net6.0\FlujoAsincrono.dll
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\FlujoAsincrono\FlujoAsincrono\obj\Debug\net6.0\refint\FlujoAsincrono.dll
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\FlujoAsincrono\FlujoAsincrono\obj\Debug\net6.0\FlujoAsincrono.pdb
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\FlujoAsincrono\FlujoAsincrono\obj\Debug\net6.0\FlujoAsincrono.genruntimeconfig.cache
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\FlujoAsincrono\FlujoAsincrono\obj\Debug\net6.0\ref\FlujoAsincrono.dll

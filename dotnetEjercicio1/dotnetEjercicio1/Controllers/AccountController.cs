@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace dotnetEjercicio1.Controllers
 {
@@ -14,10 +15,13 @@ namespace dotnetEjercicio1.Controllers
     {
         private readonly UniversityDBContext _context;
         private readonly JwtSettings _jwtSetting;
-        public AccountController(UniversityDBContext context, JwtSettings jwtSetting)
+        private readonly ILoggerFactory _loggerFactory;
+
+        public AccountController(UniversityDBContext context, JwtSettings jwtSetting, ILoggerFactory loggerFactory)
         {
             _context = context;
             _jwtSetting = jwtSetting;
+            _loggerFactory = loggerFactory;
         }
 
         private IEnumerable<User> Logins = new List<User>()
@@ -81,5 +85,7 @@ namespace dotnetEjercicio1.Controllers
         {
             return Ok(Logins);
         }
+
+      
     }
 }

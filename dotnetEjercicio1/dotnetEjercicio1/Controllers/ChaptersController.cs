@@ -15,10 +15,12 @@ namespace dotnetEjercicio1.Controllers
     public class ChaptersController : ControllerBase
     {
         private readonly UniversityDBContext _context;
+        private readonly ILoggerFactory _loggerFactory;
 
-        public ChaptersController(UniversityDBContext context)
+        public ChaptersController(UniversityDBContext context, ILoggerFactory loggerFactory)
         {
             _context = context;
+            _loggerFactory = loggerFactory;
         }
 
         // GET: api/Chapters

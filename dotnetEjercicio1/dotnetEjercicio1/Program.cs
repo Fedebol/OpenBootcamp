@@ -5,8 +5,19 @@ using dotnetEjercicio1.DataAccess;
 using dotnetEjercicio1.Service;
 using dotnetEjercicio1;
 using Microsoft.OpenApi.Models;
+//10. use seriLog to log event
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//11. Config Serilog
+builder.Host.UseSerilog((hostBuilderCtx, loggerConf) =>
+{
+    loggerConf
+        .WriteTo.Console()
+        .WriteTo.Debug()
+        .ReadFrom.Configuration(hostBuilderCtx.Configuration);
+});
 
 
 // 2. Connection whit SQL Server Express
@@ -95,6 +106,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
+// 12. Tell app to use Serilog
+app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
 

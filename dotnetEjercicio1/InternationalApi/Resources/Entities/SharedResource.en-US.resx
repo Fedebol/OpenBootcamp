@@ -120,8 +120,8 @@
   <data name="Article" xml:space="preserve">
     <value>My Article</value>
   </data>
-  <data name="TodayIs" xml:space="preserve">
-    <value>Today is {0}</value>
+  <data name="Today" xml:space="preserve">
+    <value>Today is [0]</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Welcome!</value>

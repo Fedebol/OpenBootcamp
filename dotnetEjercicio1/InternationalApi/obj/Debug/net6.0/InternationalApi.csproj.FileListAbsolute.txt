@@ -38,3 +38,5 @@ C:\Users\Fede\OneDrive\Escritorio\Ejercicios\dotnetEjercicio1\InternationalApi\o
 C:\Users\Fede\OneDrive\Escritorio\Ejercicios\dotnetEjercicio1\InternationalApi\obj\Debug\net6.0\InternationalApi.pdb
 C:\Users\Fede\OneDrive\Escritorio\Ejercicios\dotnetEjercicio1\InternationalApi\obj\Debug\net6.0\InternationalApi.genruntimeconfig.cache
 C:\Users\Fede\OneDrive\Escritorio\Ejercicios\dotnetEjercicio1\InternationalApi\obj\Debug\net6.0\ref\InternationalApi.dll
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\dotnetEjercicio1\InternationalApi\obj\Debug\net6.0\InternationalApi.Resources.Controllers.PostsController.al-AL.resources
+C:\Users\Fede\OneDrive\Escritorio\Ejercicios\dotnetEjercicio1\InternationalApi\obj\Debug\net6.0\InternationalApi.Resources.Entities.SharedResource.al-AL.resources

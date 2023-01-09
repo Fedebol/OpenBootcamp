@@ -1,7 +1,7 @@
-﻿using InternationalApi.Controllers.Entities;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
+using InternationalApi.Controllers.Entities;
 
 namespace InternationalApi.Controllers
 {
@@ -38,7 +38,7 @@ namespace InternationalApi.Controllers
         {
             var article = _stringLocalizer["Article"];
             var postName = _stringLocalizer.GetString("Welcome").Value ?? String.Empty;
-            var todayIs = string.Format(_sharedResourceLocalizer.GetString("TodayIs").Value, DateTime.Now.ToLongDateString());
+            var todayIs = string.Format(_stringLocalizer.GetString("Today"), DateTime.Now.ToLongDateString());
 
 
 

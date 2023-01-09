@@ -15,10 +15,10 @@ var app = builder.Build();
 
 // 2. SUPPORTED CULTURES
 
-var supportedCultures = new[] { "en-US", "es-ES", "fr-FR" }; // USA inglish, spain spanish, frence french
+var supportedCultures = new[] { "en-US", "es-ES", "fr-FR", "al-AL" }; // USA inglish, spain spanish, frence french
 var localizationOption = new RequestLocalizationOptions()
     .SetDefaultCulture(supportedCultures[0]) //default
-    .AddSupportedCultures(supportedCultures) //todas
+    .AddSupportedCultures(supportedCultures) //all
     .AddSupportedUICultures(supportedCultures); // cultures po UI
 
 // 3. ADD LOCALIZATION to app

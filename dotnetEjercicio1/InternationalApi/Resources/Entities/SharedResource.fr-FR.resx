@@ -120,7 +120,7 @@
   <data name="Article" xml:space="preserve">
     <value>Articulo!</value>
   </data>
-  <data name="TodayIs" xml:space="preserve">
+  <data name="Today" xml:space="preserve">
     <value>Aujourd'ui est {0}</value>
   </data>
   <data name="Welcome" xml:space="preserve">

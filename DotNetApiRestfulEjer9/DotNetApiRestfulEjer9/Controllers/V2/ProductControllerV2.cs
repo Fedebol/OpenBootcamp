@@ -24,7 +24,7 @@ namespace DotNetApiRestfulEjer9.Controllers.V2
         {
             var response = await _httpClient.GetStreamAsync(ApiTestURL);
 
-            var productsData = await JsonSerializer.DeserializeAsync<Producto2>(response);
+            var productsData = await JsonSerializer.DeserializeAsync<List<Producto2>>(response);
 
             return Ok(productsData);
         }

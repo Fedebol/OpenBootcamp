@@ -8,6 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using dotnetEjercicio1.DataAccess;
 using dotnetEjercicio1.Models.DataModels;
 using dotnetEjercicio1.Service;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace dotnetEjercicio1.Controllers
 {
@@ -47,9 +50,10 @@ namespace dotnetEjercicio1.Controllers
             return course;
         }
 
-        // PUT: api/Courses/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+// PUT: api/Courses/5
+// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<IActionResult> PutCourse(int id, Course course)
         {
             if (id != course.Id)
@@ -81,6 +85,7 @@ namespace dotnetEjercicio1.Controllers
         // POST: api/Courses
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<ActionResult<Course>> PostCourse(Course course)
         {
             _context.Cursos.Add(course);
@@ -91,6 +96,7 @@ namespace dotnetEjercicio1.Controllers
 
         // DELETE: api/Courses/5
         [HttpDelete("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<IActionResult> DeleteCourse(int id)
         {
             var course = await _context.Cursos.FindAsync(id);

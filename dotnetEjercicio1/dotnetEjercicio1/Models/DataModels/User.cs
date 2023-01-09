@@ -14,5 +14,7 @@ namespace dotnetEjercicio1.Models.DataModels
         public string Password { get; set; } = string.Empty;
         [Required]
         public Student Student { get; set; } = new Student();
+        [Required]
+        public string Rol { get; set; } = "user";
     }
 }

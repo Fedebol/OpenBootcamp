@@ -9,7 +9,7 @@
         public string RefreshToken { get; set; }
         public string EmailId { get; set; }
         public Guid GuidId { get; set; }
-        public DateTime ExpiredTiem { get; set; }
+        public DateTime ExpiredTime { get; set; }
 
     }
 }

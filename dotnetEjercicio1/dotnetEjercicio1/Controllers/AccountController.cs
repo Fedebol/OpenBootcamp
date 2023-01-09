@@ -49,7 +49,7 @@ namespace dotnetEjercicio1.Controllers
             {
                 var Token = new UserTokens();
 
-                var searchUser = (from user in _context.Users
+                var searchUser = (from user in Logins
                                   where user.UserName == userLogin.UserName && user.Password == userLogin.Password
                                   select user).FirstOrDefault();
 

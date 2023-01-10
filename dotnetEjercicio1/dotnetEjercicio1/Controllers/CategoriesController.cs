@@ -21,13 +21,14 @@ namespace dotnetEjercicio1.Controllers
         private readonly UniversityDBContext _context;
         private readonly ICategoriesServices _categoriesServices;
         private readonly ILoggerFactory _loggerFactory;
+        private readonly ILogger<CategoriesController> _logger;
 
-        public CategoriesController(UniversityDBContext context, ICategoriesServices categoriesServices, ILoggerFactory loggerFactory)
+        public CategoriesController(UniversityDBContext context, ICategoriesServices categoriesServices, ILoggerFactory loggerFactory, ILogger<CategoriesController> logger)
         {
             _context = context;
             _categoriesServices = categoriesServices;
             _loggerFactory = loggerFactory;
-
+            _logger = logger;   
         }
 
         // GET: api/Categories
@@ -35,6 +36,7 @@ namespace dotnetEjercicio1.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
         public async Task<ActionResult<IEnumerable<Category>>> GetCategories()
         {
+
             return await _context.Categories.ToListAsync();
         }
 
@@ -42,6 +44,10 @@ namespace dotnetEjercicio1.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Category>> GetCategory(int id)
         {
+            _logger.LogWarning($"{nameof(CategoriesController)} - {nameof(GetCategory)} - Warning Level Log");
+            _logger.LogError($"{nameof(CategoriesController)} - {nameof(GetCategory)} - Error Level Log");
+            _logger.LogCritical($"{nameof(CategoriesController)} - {nameof(GetCategory)} - Critical Level Log");
+
             var category = await _context.Categories.FindAsync(id);
 
             if (category == null)
@@ -62,6 +68,9 @@ namespace dotnetEjercicio1.Controllers
             {
                 return BadRequest();
             }
+            _logger.LogWarning($"{nameof(CategoriesController)} - {nameof(PutCategory)} - Warning Level Log");
+            _logger.LogError($"{nameof(CategoriesController)} - {nameof(PutCategory)} - Error Level Log");
+            _logger.LogCritical($"{nameof(CategoriesController)} - {nameof(PutCategory)} - Critical Level Log");
 
             _context.Entry(category).State = EntityState.Modified;
 
@@ -92,6 +101,10 @@ namespace dotnetEjercicio1.Controllers
             _context.Categories.Add(category);
             await _context.SaveChangesAsync();
 
+            _logger.LogWarning($"{nameof(CategoriesController)} - {nameof(PostCategory)} - Warning Level Log");
+            _logger.LogError($"{nameof(CategoriesController)} - {nameof(PostCategory)} - Error Level Log");
+            _logger.LogCritical($"{nameof(CategoriesController)} - {nameof(PostCategory)} - Critical Level Log");
+
             return CreatedAtAction("GetCategory", new { id = category.Id }, category);
         }
 
@@ -105,6 +118,9 @@ namespace dotnetEjercicio1.Controllers
             {
                 return NotFound();
             }
+            _logger.LogWarning($"{nameof(CategoriesController)} - {nameof(DeleteCategory)} - Warning Level Log");
+            _logger.LogError($"{nameof(CategoriesController)} - {nameof(DeleteCategory)} - Error Level Log");
+            _logger.LogCritical($"{nameof(CategoriesController)} - {nameof(DeleteCategory)} - Critical Level Log");
 
             _context.Categories.Remove(category);
             await _context.SaveChangesAsync();

@@ -19,17 +19,23 @@ namespace dotnetEjercicio1.Controllers
     {
         private readonly UniversityDBContext _context;
         private readonly ILoggerFactory _loggerFactory;
+        private readonly ILogger<ChaptersController> _logger;
 
-        public ChaptersController(UniversityDBContext context, ILoggerFactory loggerFactory)
+        public ChaptersController(UniversityDBContext context, ILoggerFactory loggerFactory, ILogger<ChaptersController> logger)
         {
             _context = context;
             _loggerFactory = loggerFactory;
+            _logger = logger;
         }
 
         // GET: api/Chapters
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Chapter>>> GetChapters()
         {
+            _logger.LogWarning($"{nameof(ChaptersController)} - {nameof(GetChapters)} - Warning Level Log");
+            _logger.LogError($"{nameof(ChaptersController)} - {nameof(GetChapters)} - Error Level Log");
+            _logger.LogCritical($"{nameof(ChaptersController)} - {nameof(GetChapters)} - Critical Level Log");
+
             return await _context.Chapters.ToListAsync();
         }
 
@@ -57,6 +63,10 @@ namespace dotnetEjercicio1.Controllers
             {
                 return BadRequest();
             }
+
+            _logger.LogWarning($"{nameof(ChaptersController)} - {nameof(PutChapter)} - Warning Level Log");
+            _logger.LogError($"{nameof(ChaptersController)} - {nameof(PutChapter)} - Error Level Log");
+            _logger.LogCritical($"{nameof(ChaptersController)} - {nameof(PutChapter)} - Critical Level Log");
 
             _context.Entry(chapter).State = EntityState.Modified;
 
@@ -87,6 +97,9 @@ namespace dotnetEjercicio1.Controllers
         {
             _context.Chapters.Add(chapter);
             await _context.SaveChangesAsync();
+            _logger.LogWarning($"{nameof(ChaptersController)} - {nameof(PostChapter)} - Warning Level Log");
+            _logger.LogError($"{nameof(ChaptersController)} - {nameof(PostChapter)} - Error Level Log");
+            _logger.LogCritical($"{nameof(ChaptersController)} - {nameof(PostChapter)} - Critical Level Log");
 
             return CreatedAtAction("GetChapter", new { id = chapter.Id }, chapter);
         }
@@ -101,6 +114,9 @@ namespace dotnetEjercicio1.Controllers
             {
                 return NotFound();
             }
+            _logger.LogWarning($"{nameof(ChaptersController)} - {nameof(DeleteChapter)} - Warning Level Log");
+            _logger.LogError($"{nameof(ChaptersController)} - {nameof(DeleteChapter)} - Error Level Log");
+            _logger.LogCritical($"{nameof(ChaptersController)} - {nameof(DeleteChapter)} - Critical Level Log");
 
             _context.Chapters.Remove(chapter);
             await _context.SaveChangesAsync();

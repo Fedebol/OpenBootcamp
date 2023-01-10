@@ -21,18 +21,23 @@ namespace dotnetEjercicio1.Controllers
         private readonly UniversityDBContext _context;
         private readonly ICoursesService _coursesService;
         private readonly ILoggerFactory _loggerFactory;
+        private readonly ILogger<CoursesController> _logger;
 
-        public CoursesController(UniversityDBContext context, ICoursesService coursesService, ILoggerFactory loggerFactory)
+        public CoursesController(UniversityDBContext context, ICoursesService coursesService, ILoggerFactory loggerFactory, ILogger<CoursesController> logger)
         {
             _context = context;
             _coursesService = coursesService;
             _loggerFactory = loggerFactory;
+            _logger = logger;
         }
 
         // GET: api/Courses
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Course>>> GetCursos()
         {
+            _logger.LogWarning($"{nameof(CoursesController)} - {nameof(GetCursos)} - Warning Level Log");
+            _logger.LogError($"{nameof(CoursesController)} - {nameof(GetCursos)} - Error Level Log");
+            _logger.LogCritical($"{nameof(CoursesController)} - {nameof(GetCursos)} - Critical Level Log");
             return await _context.Cursos.ToListAsync();
         }
 
@@ -46,6 +51,9 @@ namespace dotnetEjercicio1.Controllers
             {
                 return NotFound();
             }
+            _logger.LogWarning($"{nameof(CoursesController)} - {nameof(GetCursos)} - Warning Level Log");
+            _logger.LogError($"{nameof(CoursesController)} - {nameof(GetCursos)} - Error Level Log");
+            _logger.LogCritical($"{nameof(CoursesController)} - {nameof(GetCursos)} - Critical Level Log");
 
             return course;
         }
@@ -60,6 +68,9 @@ namespace dotnetEjercicio1.Controllers
             {
                 return BadRequest();
             }
+            _logger.LogWarning($"{nameof(CoursesController)} - {nameof(PutCourse)} - Warning Level Log");
+            _logger.LogError($"{nameof(CoursesController)} - {nameof(PutCourse)} - Error Level Log");
+            _logger.LogCritical($"{nameof(CoursesController)} - {nameof(PutCourse)} - Critical Level Log");
 
             _context.Entry(course).State = EntityState.Modified;
 
@@ -90,6 +101,9 @@ namespace dotnetEjercicio1.Controllers
         {
             _context.Cursos.Add(course);
             await _context.SaveChangesAsync();
+            _logger.LogWarning($"{nameof(CoursesController)} - {nameof(PostCourse)} - Warning Level Log");
+            _logger.LogError($"{nameof(CoursesController)} - {nameof(PostCourse)} - Error Level Log");
+            _logger.LogCritical($"{nameof(CoursesController)} - {nameof(PostCourse)} - Critical Level Log");
 
             return CreatedAtAction("GetCourse", new { id = course.Id }, course);
         }
@@ -104,6 +118,9 @@ namespace dotnetEjercicio1.Controllers
             {
                 return NotFound();
             }
+            _logger.LogWarning($"{nameof(CoursesController)} - {nameof(DeleteCourse)} - Warning Level Log");
+            _logger.LogError($"{nameof(CoursesController)} - {nameof(DeleteCourse)} - Error Level Log");
+            _logger.LogCritical($"{nameof(CoursesController)} - {nameof(DeleteCourse)} - Critical Level Log");
 
             _context.Cursos.Remove(course);
             await _context.SaveChangesAsync();

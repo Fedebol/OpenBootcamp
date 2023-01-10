@@ -1,0 +1,43 @@
+2023-01-10 10:28:59.780 -03:00 [INF] User profile is available. Using 'C:\Users\Fede\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-10 10:29:00.262 -03:00 [INF] Now listening on: https://localhost:7040
+2023-01-10 10:29:00.265 -03:00 [INF] Now listening on: http://localhost:5041
+2023-01-10 10:29:00.271 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-10 10:29:00.274 -03:00 [INF] Hosting environment: Development
+2023-01-10 10:29:00.276 -03:00 [INF] Content root path: C:\Users\Fede\OneDrive\Escritorio\Ejercicios\dotnetEjercicio1\dotnetEjercicio1\
+2023-01-10 10:29:01.773 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7040/swagger/index.html - -
+2023-01-10 10:29:02.489 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7040/_framework/aspnetcore-browser-refresh.js - -
+2023-01-10 10:29:02.509 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7040/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 17.4482ms
+2023-01-10 10:29:02.509 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7040/swagger/index.html - - - 200 - text/html;charset=utf-8 739.4754ms
+2023-01-10 10:29:02.524 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7040/_vs/browserLink - -
+2023-01-10 10:29:02.613 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7040/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 88.9996ms
+2023-01-10 10:29:02.704 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7040/swagger/v1/swagger.json - -
+2023-01-10 10:29:02.890 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7040/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 186.1986ms
+2023-01-10 12:39:28.823 -03:00 [INF] User profile is available. Using 'C:\Users\Fede\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-01-10 12:39:29.079 -03:00 [INF] Now listening on: https://localhost:7040
+2023-01-10 12:39:29.081 -03:00 [INF] Now listening on: http://localhost:5041
+2023-01-10 12:39:29.094 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-10 12:39:29.096 -03:00 [INF] Hosting environment: Development
+2023-01-10 12:39:29.098 -03:00 [INF] Content root path: C:\Users\Fede\OneDrive\Escritorio\Ejercicios\dotnetEjercicio1\dotnetEjercicio1\
+2023-01-10 12:39:30.278 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7040/swagger/index.html - -
+2023-01-10 12:39:30.866 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7040/_framework/aspnetcore-browser-refresh.js - -
+2023-01-10 12:39:30.874 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7040/swagger/index.html - - - 200 - text/html;charset=utf-8 597.7440ms
+2023-01-10 12:39:30.874 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7040/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 7.4127ms
+2023-01-10 12:39:30.887 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7040/_vs/browserLink - -
+2023-01-10 12:39:30.907 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7040/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 19.8688ms
+2023-01-10 12:39:31.004 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7040/swagger/v1/swagger.json - -
+2023-01-10 12:39:31.161 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7040/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 156.5739ms
+2023-01-10 12:39:52.429 -03:00 [INF] Request starting HTTP/2 POST https://localhost:7040/api/Account/GetToken application/json 48
+2023-01-10 12:39:52.440 -03:00 [INF] CORS policy execution successful.
+2023-01-10 12:39:52.447 -03:00 [INF] Executing endpoint 'dotnetEjercicio1.Controllers.AccountController.GetToken (dotnetEjercicio1)'
+2023-01-10 12:39:52.476 -03:00 [INF] Route matched with {action = "GetToken", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetToken(dotnetEjercicio1.Models.DataModels.UserLogins) on controller dotnetEjercicio1.Controllers.AccountController (dotnetEjercicio1).
+2023-01-10 12:39:52.903 -03:00 [INF] Executing OkObjectResult, writing value of type 'dotnetEjercicio1.Models.DataModels.UserTokens'.
+2023-01-10 12:39:52.943 -03:00 [INF] Executed action dotnetEjercicio1.Controllers.AccountController.GetToken (dotnetEjercicio1) in 458.9063ms
+2023-01-10 12:39:52.949 -03:00 [INF] Executed endpoint 'dotnetEjercicio1.Controllers.AccountController.GetToken (dotnetEjercicio1)'
+2023-01-10 12:39:52.954 -03:00 [INF] HTTP POST /api/Account/GetToken responded 200 in 516.9060 ms
+2023-01-10 12:39:52.960 -03:00 [INF] Request finished HTTP/2 POST https://localhost:7040/api/Account/GetToken application/json 48 - 200 - application/json;+charset=utf-8 530.7793ms
+2023-01-10 12:40:14.272 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7040/api/Categories - -
+2023-01-10 12:40:14.390 -03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Administrator)
+2023-01-10 12:40:14.395 -03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2023-01-10 12:40:14.398 -03:00 [INF] HTTP GET /api/Categories responded 403 in 123.0415 ms
+2023-01-10 12:40:14.402 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7040/api/Categories - - - 403 0 - 130.6538ms

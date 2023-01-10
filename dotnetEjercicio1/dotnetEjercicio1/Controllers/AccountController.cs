@@ -16,12 +16,14 @@ namespace dotnetEjercicio1.Controllers
         private readonly UniversityDBContext _context;
         private readonly JwtSettings _jwtSetting;
         private readonly ILoggerFactory _loggerFactory;
+        private readonly ILogger<AccountController> _logger;
 
-        public AccountController(UniversityDBContext context, JwtSettings jwtSetting, ILoggerFactory loggerFactory)
+        public AccountController(UniversityDBContext context, JwtSettings jwtSetting, ILoggerFactory loggerFactory, ILogger<AccountController> logger)
         {
             _context = context;
             _jwtSetting = jwtSetting;
             _loggerFactory = loggerFactory;
+            _logger = logger;
         }
 
         private IEnumerable<User> Logins = new List<User>()
@@ -81,11 +83,15 @@ namespace dotnetEjercicio1.Controllers
         }
         [HttpGet]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administrator")]
+
         public IActionResult GetUserList()
         {
             return Ok(Logins);
         }
 
-      
+
+
+
+
     }
 }

@@ -21,18 +21,23 @@ namespace dotnetEjercicio1.Controllers
         private readonly UniversityDBContext _context;
         private readonly IUsuersSerice _usersService;
         private readonly ILoggerFactory _loggerFactory;
+        private readonly ILogger<StudentsController> _logger;
 
-        public UsersController(UniversityDBContext context, IUsuersSerice usuersSerice, ILoggerFactory loggerFactory)
+        public UsersController(UniversityDBContext context, IUsuersSerice usuersSerice, ILoggerFactory loggerFactory, ILogger<StudentsController> logger)
         {
             _context = context;
             _usersService = usuersSerice;
             _loggerFactory = loggerFactory;
+            _logger = logger;
         }
 
         // GET: api/Users
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
+            _logger.LogWarning($"{nameof(UsersController)} - {nameof(GetUsers)} - Warning Level Log");
+            _logger.LogError($"{nameof(UsersController)} - {nameof(GetUsers)} - Error Level Log");
+            _logger.LogCritical($"{nameof(UsersController)} - {nameof(GetUsers)} - Critical Level Log");
             return await _context.Users.ToListAsync();
         }
 
@@ -60,6 +65,9 @@ namespace dotnetEjercicio1.Controllers
             {
                 return BadRequest();
             }
+            _logger.LogWarning($"{nameof(UsersController)} - {nameof(PutUser)} - Warning Level Log");
+            _logger.LogError($"{nameof(UsersController)} - {nameof(PutUser)} - Error Level Log");
+            _logger.LogCritical($"{nameof(UsersController)} - {nameof(PutUser)} - Critical Level Log");
 
             _context.Entry(user).State = EntityState.Modified;
 
@@ -90,6 +98,9 @@ namespace dotnetEjercicio1.Controllers
         {
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
+            _logger.LogWarning($"{nameof(UsersController)} - {nameof(PostUser)} - Warning Level Log");
+            _logger.LogError($"{nameof(UsersController)} - {nameof(PostUser)} - Error Level Log");
+            _logger.LogCritical($"{nameof(UsersController)} - {nameof(PostUser)} - Critical Level Log");
 
             return CreatedAtAction("GetUser", new { id = user.Id }, user);
         }
@@ -107,6 +118,9 @@ namespace dotnetEjercicio1.Controllers
 
             _context.Users.Remove(user);
             await _context.SaveChangesAsync();
+            _logger.LogWarning($"{nameof(UsersController)} - {nameof(DeleteUser)} - Warning Level Log");
+            _logger.LogError($"{nameof(UsersController)} - {nameof(DeleteUser)} - Error Level Log");
+            _logger.LogCritical($"{nameof(UsersController)} - {nameof(DeleteUser)} - Critical Level Log");
 
             return NoContent();
         }

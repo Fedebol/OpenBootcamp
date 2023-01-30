@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Backend.Models.DataModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace Backend.DataAccess
 {
@@ -8,5 +9,7 @@ namespace Backend.DataAccess
         {
             
         }
+        public DbSet<User>? Users { get; set; }
+
     }
 }

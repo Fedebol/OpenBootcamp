@@ -1,4 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using Backend.DataAccess;
+
 var builder = WebApplication.CreateBuilder(args);
+
+const string CONNECTIONNAME = "PruebaDB"; 
+var connectionString = builder.Configuration.GetConnectionString(CONNECTIONNAME);
+builder.Services.AddDbContext<BackBDContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 

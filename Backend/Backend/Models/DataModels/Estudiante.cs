@@ -12,6 +12,7 @@ namespace Backend.Models.DataModels
         public DateTime DOB { get; set; }
 
         public ICollection<Curso> Cursos { get; set; } = new List<Curso>();
+        public ICollection<User> Users { get; set; } = new List<User>();
 
     }
 }

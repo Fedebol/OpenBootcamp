@@ -37,5 +37,7 @@ namespace Backend.Models.DataModels
         [Required]
         public ICollection<Estudiante> Estudiantes { get; set; } = new List<Estudiante>();
 
+        public ICollection<User> Users { get; set; } = new List<User>();
+
     }
 }

@@ -28,5 +28,14 @@ namespace Backend.Models.DataModels
         [Required]
         public Nivel Nivel { get; set; } = Nivel.Basico;
 
+        [Required]
+        public ICollection<Categoria> Categorias { get; set; } = new List<Categoria>();
+
+        [Required]
+        public Contenido Contenido { get; set; } = new Contenido();
+
+        [Required]
+        public ICollection<Estudiante> Estudiantes { get; set; } = new List<Estudiante>();
+
     }
 }

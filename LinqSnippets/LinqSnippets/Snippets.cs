@@ -15,7 +15,7 @@ namespace LinqSnippets
                 "VW Golf",
                 "VW California",
                 "Audi A3",
-                "AUdi A5",
+                "Audi A5",
                 "Fiat Punto",
                 "Seat Ibiza",
                 "Seat Leon"
